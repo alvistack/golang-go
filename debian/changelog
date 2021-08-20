@@ -1,0 +1,5 @@
+golang-1.16 (100:1.16.11-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.16.11
+
+ -- Wong Hoi Sing Edison <hswong3i@gmail.com>  Fri, 03 Dec 2021 11:14:21 +0800
