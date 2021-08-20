@@ -1,0 +1,5 @@
+golang-1.17 (100:1.17.2-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.17.2
+
+ -- Wong Hoi Sing Edison <hswong3i@gmail.com>  Fri, 27 Aug 2021 21:44:53 +0800
