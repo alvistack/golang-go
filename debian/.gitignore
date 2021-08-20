@@ -1,0 +1,8 @@
+*.substvars
+*debhelper*
+.debhelper
+files
+golang-1.17
+golang-any
+golang-go
+tmp

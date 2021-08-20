@@ -1,0 +1,59 @@
+Source: golang-1.17
+Section: golang
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Homepage: https://github.com/golang/go/releases
+Vcs-Browser: https://github.com/alvistack/golang-go
+Vcs-Git: https://github.com/alvistack/golang-go.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+ golang-any (>= 2:1.4~) | golang-go (>= 2:1.4~) | gccgo (>= 4:5~),
+ fdupes,
+ netbase,
+
+Package: golang-1.17
+Architecture: amd64
+Description: Go programming language compiler
+ The Go programming language is an open source project to make
+ programmers more productive. Go is expressive, concise, clean, and
+ efficient. Its concurrency mechanisms make it easy to write programs
+ that get the most out of multicore and networked machines, while its
+ novel type system enables flexible and modular program construction. Go
+ compiles quickly to machine code yet has the convenience of garbage
+ collection and the power of run-time reflection. It's a fast, statically
+ typed, compiled language that feels like a dynamically typed,
+ interpreted language.
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ ${perl:Depends},
+Provides:
+ golang-1.17-go,
+ golang-1.17-src,
+ golang-1.17-doc,
+
+Package: golang-go
+Architecture: amd64
+Description: Go programming language compiler - metapackage
+ This is a dependency package that depends on the default Go toolchain and
+ compiled standard library. It is only built on architectures that have a
+ native toolchain ("gc compiler"). Packages that want to build with whichever
+ of gc or gccgo is available should depend on golang-any.
+Depends:
+ ${misc:Depends},
+ golang-1.17 (>= ${source:Version}),
+
+Package: golang-any
+Architecture: amd64
+Description: Go programming language compiler - metapackage
+ This is a dependency package that depends on the default Go toolchain and
+ compiled standard library or gccgo on architectures that do not have a native
+ toolchain ("gc compiler") port. Because the gccgo and Go releases are not on
+ the same schedule, it is not guaranteed that the version of the Go language
+ provided by the version of gccgo that this package depends upon will match the
+ version of this package.
+Depends:
+ ${misc:Depends},
+ golang-go (>= ${source:Version}),
