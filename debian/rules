@@ -1,0 +1,45 @@
+#!/usr/bin/make -f
+
+SHELL := /bin/bash
+
+override_dh_auto_build:
+	set -ex && \
+		for GOVER in $(shell ls -1d /usr/lib/*/bin/go | xargs dirname | xargs); do export PATH=$$GOVER:$$PATH; done && \
+		export GOROOT=$(CURDIR) && \
+		export GOROOT_FINAL=/usr/lib/go-1.16 && \
+		cd ./src && \
+		bash ./make.bash
+
+override_dh_auto_install:
+	install -Dpm755 -d debian/tmp/usr/bin
+	install -Dpm755 -d debian/tmp/usr/lib/go-1.16
+	install -Dpm755 -d debian/tmp/usr/share/doc/go-1.16/html
+	cp -rfp VERSION debian/tmp/usr/lib/go-1.16/
+	cp -rfp api debian/tmp/usr/lib/go-1.16/
+	cp -rfp bin debian/tmp/usr/lib/go-1.16/
+	cp -rfp doc/* debian/tmp/usr/share/doc/go-1.16/html/
+	cp -rfp misc debian/tmp/usr/lib/go-1.16/
+	cp -rfp pkg debian/tmp/usr/lib/go-1.16/
+	cp -rfp src debian/tmp/usr/lib/go-1.16/
+	cp -rfp test debian/tmp/usr/lib/go-1.16/
+	find debian/tmp/usr/lib/go-1.16/src -type f -name '*.rc' -delete
+	ln -fs /usr/lib/go-1.16/bin/go debian/tmp/usr/bin/go
+	ln -fs /usr/lib/go-1.16/bin/gofmt debian/tmp/usr/bin/gofmt
+	fdupes -s debian/tmp/usr
+
+override_dh_strip:
+
+override_dh_strip_nondeterminism:
+
+override_dh_shlibdeps:
+
+override_dh_makeshlibs:
+
+override_dh_dwz:
+
+override_dh_auto_test:
+
+override_dh_auto_clean:
+
+%:
+	dh $@
