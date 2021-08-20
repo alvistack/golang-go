@@ -1,0 +1,4 @@
+golang-1.16 source: debhelper-but-no-misc-depends
+golang-1.16 source: no-debian-changes
+golang-1.16 source: source-contains-prebuilt-windows-binary
+golang-1.16 source: source-is-missing
