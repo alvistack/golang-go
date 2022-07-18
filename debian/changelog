@@ -1,0 +1,5 @@
+golang-1.18 (100:1.18.4-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.18.4
+
+ -- Wong Hoi Sing Edison <hswong3i@gmail.com>  Wed, 13 Jul 2022 07:59:23 +0800
