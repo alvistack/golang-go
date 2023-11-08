@@ -1,0 +1,5 @@
+golang-1.20 (100:1.20.11-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.20.11
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 08 Nov 2023 21:19:11 +0800
