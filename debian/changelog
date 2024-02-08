@@ -1,0 +1,5 @@
+golang-1.19 (100:1.19.13-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.19.13
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 10 Jan 2024 11:53:14 +0800
