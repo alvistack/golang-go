@@ -1,0 +1,2 @@
+golang-1.22-go: empty-binary-package
+golang-1.22-go: initial-upload-closes-no-bugs
