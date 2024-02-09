@@ -1,0 +1,5 @@
+golang-1.24 (100:1.24.2-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.24.2
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 02 Apr 2025 15:34:04 +0800
