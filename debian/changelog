@@ -1,0 +1,5 @@
+golang-1.22 (100:1.22.3-1) UNRELEASED; urgency=medium
+
+  * https://github.com/golang/go/releases/tag/go1.22.3
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 08 May 2024 10:24:59 +0800

@@ -1,0 +1,14 @@
+*.substvars
+*debhelper*
+.debhelper
+files
+golang
+golang-1.22
+golang-1.22-doc
+golang-1.22-go
+golang-1.22-src
+golang-any
+golang-doc
+golang-go
+golang-src
+tmp
